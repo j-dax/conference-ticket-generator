@@ -28,4 +28,6 @@ jobs:
           base_href: /conference-ticket-generator/
           # ng build will write to ./dist/... in this branch
           deploy_branch: gh-pages
-          angular_dist_build_folder: ./dist/conference-ticket-generator
+          angular_dist_build_folder: dist/conference-ticket-generator/browser
+          run_lint: true
+          skip_failure: false
