@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+    - "main"
+    - "release-*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for GH Pages deployment
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy Angular
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v2.1.0
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          build_configuration: production
+          base_href: /conference-ticket-generator/
+          deploy_branch: gh-pages
+          # ng build will compile to this directory
+          angular_dist_build_folder: dist/conference-ticket-generator
