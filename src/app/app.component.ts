@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ChallengeFormComponent } from '../core/pages/challenge-form/challenge-form.component';
+import { ChallengeFormComponent } from '../core/pages/challenge/challenge-form/challenge-form.component';
 
 @Component({
   selector: 'app-root',

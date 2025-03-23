@@ -1,0 +1,61 @@
+.absolute { position: absolute; }
+
+.full {
+  width: 100vw;
+  height: 100vh;
+}
+
+.parent {
+  bottom: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+// The svgs that compose the background are each assigned to a div that occupy a portion of the screen
+.background {
+  background: no-repeat url("/images/background-mobile.png") 100% 100%;
+  position: fixed;
+}
+
+.lines {
+  background: repeat-x url("/images/pattern-lines.svg");
+}
+
+.circle {
+  background: no-repeat url("/images/pattern-circle.svg");
+  top: 50vh;
+  right: 20vw;
+  // restrict the size to something sensible to fit within the div
+  width: calc(20vh + 5vw);
+  aspect-ratio: 1 / 1;
+  background-size: contain;
+}
+
+.squiggle-top {
+  background: no-repeat url("/images/pattern-squiggly-line-top.svg");
+  right: 0;
+  top: 5vh;
+
+  width: 40vw;
+  aspect-ratio: 1 / 1;
+  background-size: contain;
+}
+
+.squiggle-bottom {
+  background: no-repeat url("/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
+  left: 0;
+  bottom: 0;
+
+  width: 50vw;
+  aspect-ratio: 2 / 1;
+  background-size: cover;
+}
+
+@media(min-width: 720px) {
+  .background { background-image: url("/images/background-tablet.png"); }
+}
+@media(min-width: 1200px) {
+  .background { background-image: url("/images/background-desktop.png"); }
+  .squiggle-bottom { background-image: url("/images/pattern-squiggly-line-bottom-desktop.svg"); }
+}

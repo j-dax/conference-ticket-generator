@@ -1,0 +1,15 @@
+<div class="filedrop" (dragover)="onDragOver($event)" (drop)="onDrop($event)" (click)="fileInput.click()">
+  <input type="file" accept="image/*" (change)="onChange($event)" hidden #fileInput />
+  <!--<p>{{ "I10N.UPLOAD_PLACEHOLDER" }}</p>-->
+  <div *ngIf="imageName() && (selectedFile || imagePreview())">
+    <img [src]="imagePreview()" alt="Image Preview">
+    <p><span>{{ imageName() }}</span>({{fileSize()}} KB)</p>
+    <img alt="TODO: DELETE BUTTON">
+  </div>
+  <div *ngIf="!selectedFile">
+    <div class="image-backdrop">
+      <img alt="Upload icon" src="/images/icon-upload.svg">
+    </div>
+    <p>Drag and drop or click to upload</p>
+  </div>
+</div>

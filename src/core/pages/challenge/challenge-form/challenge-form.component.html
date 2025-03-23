@@ -1,0 +1,27 @@
+<app-challenge-background />
+<div class="container">
+  <header>
+    <div class="title">
+      <img src="/images/logo-mark.svg">
+      <span>Coding Conf</span>
+    </div>
+    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <p>Secure your spot at next year's biggest coding conference.</p>
+  </header>
+  <form>
+    <label>Upload Avatar</label>
+    <image-drop />
+    <span>ⓘ Upload your photo (JPG or PNG, max size: 500KB).</span>
+
+    <label for="user-full-name">Full Name</label>
+    <input id="user-full-name" name="user-full-name" type="text" placeholder="Mona the Octocat" />
+
+    <label for="user-email">Email Address</label>
+    <input id="user-email" name="user-email" type="text" placeholder="monatheoctocat@example.com" />
+
+    <label for="user-github">GitHub Username</label>
+    <input id="user-github" name="user-github" type="text" placeholder="MonaTheOctocat" />
+
+    <button (click)="onSubmit($event)">Generate My Ticket</button>
+  </form>
+</div>
