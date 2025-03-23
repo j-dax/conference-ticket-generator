@@ -20,7 +20,9 @@
     "@angular/platform-server": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.1",
+    "@tailwindcss/postcss": "^4.0.14",
     "express": "^4.18.2",
+    "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -29,6 +31,7 @@
     "@angular-devkit/build-angular": "^19.2.1",
     "@angular/cli": "^19.2.1",
     "@angular/compiler-cli": "^19.2.0",
+    "@angular/localize": "^19.2.2",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
@@ -40,5 +43,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.7.2"
-  }
+  },
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
 }
