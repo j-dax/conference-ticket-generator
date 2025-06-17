@@ -14,13 +14,16 @@
     <span>ⓘ Upload your photo (JPG or PNG, max size: 500KB).</span>
 
     <label for="user-full-name">Full Name</label>
-    <input id="user-full-name" name="user-full-name" type="text" placeholder="Mona the Octocat" />
+    <input name="user-full-name" type="text" placeholder="Mona the Octocat" [value]="nameField()"
+      [title]="nameFieldErrors()" />
 
     <label for="user-email">Email Address</label>
-    <input id="user-email" name="user-email" type="text" placeholder="monatheoctocat@example.com" />
+    <input name="user-email" type="text" placeholder="monatheoctocat@example.com" [value]="emailField()"
+      [title]="emailFieldErrors()" />
 
     <label for="user-github">GitHub Username</label>
-    <input id="user-github" name="user-github" type="text" placeholder="MonaTheOctocat" />
+    <input name="user-github" type="text" placeholder="MonaTheOctocat" [value]="githubField()"
+      [title]="githubFieldErrors()" />
 
     <button (click)="onSubmit($event)">Generate My Ticket</button>
   </form>

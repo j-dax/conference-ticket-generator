@@ -40,6 +40,10 @@ form > input {
   font-size: 20px;
 }
 
+form > input[title=""] {
+  border-color: red;
+}
+
 form > input::placeholder {
   font-weight: 700;
   font-size: 20px;
